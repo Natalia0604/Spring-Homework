@@ -1,5 +1,6 @@
 package com.fstop.test.controller;
 
+// 負責接收前端的請求，並請業務邏輯層處理，再回傳資料給前端; 也可以為View層，渲染使用者視圖。
 import java.util.List;
 import java.util.Map;
 
@@ -17,6 +18,7 @@ import com.fstop.test.service.testService;
 import lombok.extern.slf4j.Slf4j;
 
 @Controller
+//@RequestMapping 處理URL的請求。
 @RequestMapping("/test")
 @Slf4j
 public class TestController {
@@ -26,11 +28,13 @@ public class TestController {
 	private String message = "pages";
 	
 	 //輸入頁
+	// @GetMapping 就是@RequestMapping (method = RequestMethod.GET)
     @GetMapping("/index")
     public String index(Map<String, Object> model) {
         log.info("TEST controller");
         this.message = "首頁";
         model.put("message", this.message);
+        //return會返回相對應的頁面
         return "index";
     }
     

@@ -1,5 +1,5 @@
 package com.fstop.test.service;
-
+// 被表示層呼叫，根據請求做資料處理或是處理從DAO回來的資料。
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +10,7 @@ import com.fstop.test.entity.test;
 
 @Service
 public class testService {
+	// @Autowired 預設會依注入對象的類別型態來選擇容器中相符的物件來注入。
 	@Autowired
 	private testDao testdao;
 	
@@ -19,7 +20,7 @@ public class testService {
 	}
 
 	public test getTestById(String id) {
-		return testdao.getOne(id);
+		return testdao.getReferenceById(id);
 	}
 
 	//新增資料
