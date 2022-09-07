@@ -17,8 +17,11 @@ import com.fstop.test.service.testService;
 
 import lombok.extern.slf4j.Slf4j;
 
+
+// @Controller 進行前端請求的處理，轉發，重定向。包括調用Service層的方法
+// @RequestMapping 處理URL的請求。
+
 @Controller
-//@RequestMapping 處理URL的請求。
 @RequestMapping("/test")
 @Slf4j
 public class TestController {

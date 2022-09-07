@@ -1,4 +1,5 @@
 package com.fstop.test.entity;
+// Entity層 對資料庫做增修查改等操作。
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

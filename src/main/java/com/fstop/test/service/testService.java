@@ -1,5 +1,5 @@
 package com.fstop.test.service;
-// 被表示層呼叫，根據請求做資料處理或是處理從DAO回來的資料。
+// 被controller層呼叫，根據請求做資料處理或是處理從DAO回來的資料。
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.fstop.test.dao.testDao;
 import com.fstop.test.entity.test;
 
+// @Service處理業務邏輯
 @Service
 public class testService {
 	// @Autowired 預設會依注入對象的類別型態來選擇容器中相符的物件來注入。
